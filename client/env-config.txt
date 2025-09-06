@@ -1,0 +1,7 @@
+# Create a .env file in the client folder with this content:
+REACT_APP_API_URL=https://atrapeai-production.up.railway.app
+
+# Instructions:
+# 1. Create a new file named .env in the client folder
+# 2. Copy the above line into that file
+# 3. Save the file
