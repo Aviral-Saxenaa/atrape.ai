@@ -1,0 +1,9 @@
+# Frontend Environment Variables for Vercel Deployment
+# Create a .env file in the client folder with these variables
+
+REACT_APP_API_URL=https://your-railway-app.railway.app
+
+# Instructions:
+# 1. Create a file named .env in the client folder
+# 2. Add the above line, but replace "your-railway-app.railway.app" with your actual Railway URL
+# 3. Example: REACT_APP_API_URL=https://shopeasy-backend-production.railway.app

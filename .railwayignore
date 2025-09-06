@@ -1,0 +1,10 @@
+# Railway ignore file - only deploy backend files
+client/
+node_modules/
+.git/
+*.log
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

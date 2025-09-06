@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import axios from 'axios';
+import apiClient from '../config/api';
 import { toast } from 'react-toastify';
 import { useAuth } from './AuthContext';
 
@@ -32,7 +32,7 @@ export const CartProvider = ({ children }) => {
     
     try {
       setLoading(true);
-      const response = await axios.get('/api/cart');
+      const response = await apiClient.get('/api/cart');
       setCartItems(response.data);
     } catch (error) {
       console.error('Error loading cart:', error);
@@ -48,7 +48,7 @@ export const CartProvider = ({ children }) => {
     }
 
     try {
-      await axios.post('/api/cart/add', { itemId, quantity });
+      await apiClient.post('/api/cart/add', { itemId, quantity });
       await loadCart(); // Reload cart to get updated data
       toast.success('Item added to cart!');
     } catch (error) {
@@ -61,7 +61,7 @@ export const CartProvider = ({ children }) => {
     if (!user) return;
 
     try {
-      await axios.put('/api/cart/update', { itemId, quantity });
+      await apiClient.put('/api/cart/update', { itemId, quantity });
       await loadCart(); // Reload cart to get updated data
       if (quantity === 0) {
         toast.success('Item removed from cart');
@@ -78,7 +78,7 @@ export const CartProvider = ({ children }) => {
     if (!user) return;
 
     try {
-      await axios.delete(`/api/cart/remove/${itemId}`);
+      await apiClient.delete(`/api/cart/remove/${itemId}`);
       await loadCart(); // Reload cart to get updated data
       toast.success('Item removed from cart');
     } catch (error) {

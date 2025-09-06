@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Filter, ShoppingCart } from 'lucide-react';
-import axios from 'axios';
+import apiClient from '../config/api';
 import { useCart } from '../contexts/CartContext';
 import { useAuth } from '../contexts/AuthContext';
 import ProductCard from '../components/ProductCard';
@@ -34,7 +34,7 @@ const ProductList = () => {
   const fetchProducts = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('/api/items');
+      const response = await apiClient.get('/api/items');
       setProducts(response.data);
     } catch (error) {
       console.error('Error fetching products:', error);
