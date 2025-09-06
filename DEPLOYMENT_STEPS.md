@@ -30,28 +30,33 @@
 
 1. **Update the API URL in client/.env**
    ```
-   REACT_APP_API_URL=https://your-railway-app.railway.app
+   REACT_APP_API_URL=https://atrapeai-production.up.railway.app
    ```
-   Replace `your-railway-app.railway.app` with your actual Railway URL
+   ✅ Already configured with your Railway URL
 
 ### Step 3: Deploy Frontend to Vercel
 
-1. **Install Vercel CLI**
+**IMPORTANT: Deploy from the client directory, not the root!**
+
+1. **Use the deployment script (Recommended)**
    ```bash
-   npm install -g vercel
+   deploy-frontend.bat
    ```
 
-2. **Build and Deploy**
+2. **OR Manual deployment:**
    ```bash
    cd client
+   npm install
    npm run build
    vercel --prod
    ```
 
 3. **Follow Vercel prompts:**
+   - Set up and deploy? **Y**
+   - Which scope? **[your-username]**
    - Link to existing project? **N** (for first time)
    - Project name: **shopeasy-frontend**
-   - Directory: **./build**
+   - In which directory is your code located? **./** (current directory)
 
 ### Step 4: Configure CORS (Important!)
 
@@ -63,7 +68,7 @@ After deployment, you need to update your backend to allow your Vercel domain.
    const corsOptions = {
      origin: [
        'http://localhost:3000',
-       'https://your-vercel-app.vercel.app'  // Add your Vercel URL here
+       'https://shopeasy-frontend.vercel.app'  // Updated with your Vercel URL
      ],
      credentials: true
    };
@@ -87,7 +92,7 @@ Use the provided batch files:
 
 ## 📝 Notes
 
-- Make sure to update the Railway URL in `client/.env` before deploying frontend
+- ✅ Railway URL already updated in `client/.env`
 - Both services offer free tiers perfect for testing
 - Railway automatically detects Node.js and builds your app
 - Vercel automatically detects React and optimizes the build

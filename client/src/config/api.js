@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // API Configuration for different environments
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? process.env.REACT_APP_API_URL || 'https://your-railway-app.railway.app'
+  ? process.env.REACT_APP_API_URL || 'https://atrapeai-production.up.railway.app'
   : 'http://localhost:5000';
 
 // Create axios instance with base URL

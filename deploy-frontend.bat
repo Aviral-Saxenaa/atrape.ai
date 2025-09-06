@@ -4,12 +4,21 @@ echo    Deploying Frontend to Vercel
 echo ========================================
 echo.
 
-echo [1/3] Installing Vercel CLI...
+echo [1/4] Installing Vercel CLI...
 npm install -g vercel
 
 echo.
-echo [2/3] Building React app...
+echo [2/4] Installing client dependencies...
 cd client
+call npm install
+if %errorlevel% neq 0 (
+    echo ERROR: Failed to install dependencies
+    pause
+    exit /b 1
+)
+
+echo.
+echo [3/4] Building React app...
 call npm run build
 if %errorlevel% neq 0 (
     echo ERROR: Build failed
@@ -18,17 +27,19 @@ if %errorlevel% neq 0 (
 )
 
 echo.
-echo [3/3] Deploying to Vercel...
+echo [4/4] Deploying to Vercel...
 echo.
-echo Follow the prompts:
-echo - Link to existing project? N (for first time)
+echo IMPORTANT: When prompted:
+echo - Set up and deploy? Y
+echo - Which scope? [your-username]
+echo - Link to existing project? N
 echo - Project name: shopeasy-frontend
-echo - Directory: ./build
+echo - In which directory is your code located? ./
 echo.
-cd build
 vercel --prod
 
 echo.
 echo Frontend deployment complete!
+echo Your app should be live at the URL shown above.
 echo.
 pause

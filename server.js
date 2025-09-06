@@ -15,7 +15,7 @@ const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-producti
 const corsOptions = {
   origin: [
     'http://localhost:3000',
-    'https://your-vercel-app.vercel.app', // Replace with your actual Vercel URL
+    'https://shopeasy-frontend.vercel.app', // Updated with likely Vercel URL
     /\.vercel\.app$/, // Allow any Vercel subdomain
     /\.railway\.app$/ // Allow Railway domains
   ],
