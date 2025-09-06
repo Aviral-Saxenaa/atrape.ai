@@ -1,0 +1,56 @@
+[
+  {
+    "id": "9408270c-d8e0-4bad-a538-df32c148116c",
+    "name": "Wireless Headphones",
+    "description": "High-quality wireless headphones with noise cancellation",
+    "price": 199.99,
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300",
+    "stock": 50
+  },
+  {
+    "id": "83ce4720-9f68-4643-b92a-9800da371362",
+    "name": "Smart Watch",
+    "description": "Feature-rich smartwatch with health monitoring",
+    "price": 299.99,
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300",
+    "stock": 30
+  },
+  {
+    "id": "2e268638-d856-47e1-8ba0-d9f87a32d2d2",
+    "name": "Running Shoes",
+    "description": "Comfortable running shoes for daily workouts",
+    "price": 89.99,
+    "category": "Sports",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300",
+    "stock": 100
+  },
+  {
+    "id": "4f9c7e1d-e200-4987-9c6f-b8b0e63132b3",
+    "name": "Coffee Maker",
+    "description": "Automatic coffee maker with programmable settings",
+    "price": 149.99,
+    "category": "Home",
+    "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=300",
+    "stock": 25
+  },
+  {
+    "id": "e9c06ee2-ae84-4ba5-8ee6-5787a4eadcd9",
+    "name": "Laptop Backpack",
+    "description": "Durable laptop backpack with multiple compartments",
+    "price": 59.99,
+    "category": "Accessories",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300",
+    "stock": 75
+  },
+  {
+    "id": "04b75523-d9f7-438d-925b-a03e0af72227",
+    "name": "Bluetooth Speaker",
+    "description": "Portable Bluetooth speaker with excellent sound quality",
+    "price": 79.99,
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=300",
+    "stock": 40
+  }
+]
